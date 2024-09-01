@@ -1,0 +1,1323 @@
+/*--------------------------------------------------------------
+    Theme Name: Roofing Agency Template
+    Theme URL: https://www.ogwebsolutions.com/
+    Author: OG Websolutions Pvt. Ltd.
+    Version:  1.0
+--------------------------------------------------------------*/
+
+
+/**
+@File:  Roofing Agency  Theme Styles
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+
+# General Style
+    ## Google Font
+    ## Preloader
+    ## Back to top button
+    ## Typography
+# Header
+# Footer
+# Home Page
+	## Banner Section
+	## About Section
+    ## Qualities Section
+    ## We Do Section
+    ## Choose Us Section
+    ## Reviews Section
+    ## Help Section
+    ## FAQ Section
+# Thank you Page
+# Privacy Policy & and Term & Conditions page
+
+**/
+
+
+/*--------------------------------------------------------------
+    # General
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+    ## Google Font
+----------------------------------*/
+
+@import url('../../../../css2-9');
+
+/* ----------------------------------
+    ## Prelaoder
+----------------------------------*/
+
+
+/* ## Preload Spinner */
+
+.preloadSpinner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 99999;
+}
+
+.preloadSpinner::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    background-color: #f5f7fa;
+    border: 1px solid #99be4f;
+    border-top: 10px dotted #99be4f;
+    border-radius: 100%;
+    animation: spinner 500ms infinite ease-in-out;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:767.98px) {
+    .preloadSpinner::after {
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+        margin-left: -25px;
+        border-top: 5px dotted #99be4f;
+    }
+}
+
+
+/* ----------------------------------
+    ## Back to top button
+----------------------------------*/
+
+.backtotop {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    height: 40px;
+    width: 40px;
+    background-color: #ec5a31;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: opacity 200ms linear;
+    display: none;
+}
+
+.backtotop::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -7px;
+    margin-top: -4px;
+    transform: rotate(-45deg);
+    height: 0;
+    width: 0;
+    border-width: 3px 3px 0 0;
+    border-style: solid;
+    padding: 5px;
+    border-color: #fff;
+}
+
+.backtotop:hover {
+    opacity: 1;
+    transition: opacity 200ms linear;
+}
+
+
+/* ----------------------------------
+    ## Typography
+----------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #2a2a2a;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #2a2a2a;
+    line-height: 1.2;
+}
+
+h2 span {
+    font-size: 20px;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: #ec5a31;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 575.98px) {
+    h2 span {
+        font-size: 18px;
+    }
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #2a2a2a;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 575.98px) {
+    p {
+        font-size: 17px;
+    }
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+dl,
+ol,
+ul {
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    color: #3c3c3c;
+}
+
+a {
+    text-decoration: none;
+    color: #ec5a31;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ec5a31;
+}
+
+label {
+    font-weight: normal;
+}
+
+label.error {
+    color: #f00;
+    padding-left: 12px;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.form-control {
+    height: auto;
+    padding: 15px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #aaaaaa;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 20px;
+}
+
+.form-control.error {
+    border-color: #f00;
+}
+
+.form-select {
+    background-image: url(../icons/carrot-icon.png);
+    background-size: 10px 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+ ::-webkit-input-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ :-moz-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ ::-moz-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ :-ms-input-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+figure {
+    margin: 0 0 0rem !important;
+}
+
+
+/*------ Font Weight ------*/
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+
+/*------ Custom Background Color ------*/
+
+.bg-color-white {
+    background-color: #fff;
+}
+
+.bg-color-aqua {
+    background-color: #eaf9f9;
+}
+
+.bg-gray {
+    background-color: #ebebeb;
+}
+
+
+/*------ Custom Text Color ------*/
+
+.text-orange {
+    color: #ec5a31;
+}
+
+
+/*------ Box Shadow ------*/
+
+.box-shadow {
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/*------ Button Style ------*/
+
+.btn {
+    color: #fff;
+    font-weight: 600;
+    background-color: rgb(233, 79, 43);
+    font-size: 18px;
+    line-height: 1;
+    padding: 18px 40px;
+    box-shadow: inset 0 0px 0px 0 rgb(255 255 255 / 22%), 0 233px 233px 0 rgb(255 255 255 / 12%);
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ec5a31;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .btn {
+        font-size: 17px;
+    }
+    .master-card {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .btn {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .btn {
+        font-size: 15px;
+    }
+}
+
+
+/*------ image width ------
+
+@media only screen and (max-width: 991.98px) {
+    .w-100 {
+        width: 60% !important;
+    }
+}*/
+
+
+/*------ Custom Container ------*/
+
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1170px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .container {
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+
+/*------ Section Spacer ------*/
+
+.sectionPadding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .sectionPadding {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+
+/*------ Section Title ------*/
+
+
+/*.section-title {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}*/
+
+.section-title h2 {
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.section-title h3 {
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .section-title h2,
+    .section-title p {
+        text-align: center;
+    }
+    .section-title h2 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {}
+
+@media only screen and (max-width: 575.98px) {
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* ------------------------------------------------- 
+#Header	
+------------------------------------------------ */
+
+header.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 5px #c1c1c1;
+}
+
+.inner-container p {
+    font-weight: 500;
+}
+
+.headerlogo .logo {
+    width: 175px;
+}
+
+@media (max-width:767.98px) {
+    header p {
+        font-size: 14px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+    padding: 40px 0 40px;
+    background-color: #242828;
+    border-top: 3px solid #ec5a31;
+}
+
+footer .footer-bottom .list-inline-item {
+    line-height: 1;
+}
+
+footer .footer-bottom .list-inline-item a {
+    font-size: 15px;
+    line-height: 1;
+    color: #fff !important;
+    display: inline-block;
+}
+
+footer .footer-bottom .list-inline-item a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-bottom .list-inline-item:not(:last-child) {
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+footer .footer-bottom p {
+    margin-bottom: 20px;
+}
+
+footer .footer-bottom .copyright {
+    font-size: 15px;
+    color: #fff;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    footer {
+        padding: 30px 0 30px;
+    }
+    footer .footer-bottom .list-inline-item a,
+    footer .footer-bottom .copyright,
+    footer .footer-bottom .p {
+        font-size: 14px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Home Page
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+    ## Banner Section
+----------------------------------*/
+
+.bannerSection {
+    background: url(../images/Roofing-banner.jpg);
+    background-repeat: no-repeat;
+    padding-top: 195px;
+    padding-bottom: 160px;
+    background-position: center;
+    background-size: cover;
+}
+
+.bannerSection .inner-container {
+    max-width: 820px;
+    width: 100%;
+}
+
+.bannerSection h1 {
+    font-size: 65px;
+    line-height: 1.3;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.bannerSection p {
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .bannerSection {
+        padding-top: 175px;
+        padding-bottom: 130px;
+    }
+    .bannerSection h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .bannerSection h1 {
+        font-size: 45px;
+    }
+    .bannerSection {
+        padding-bottom: 95px;
+    }
+    .bannerSection p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .bannerSection h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* ----------------------------------
+    ## About Section
+----------------------------------*/
+
+@media only screen and (max-width: 991.98px) {
+    .about-section .home-img,
+    .about-section .btn-sec {
+        text-align: center;
+    }
+    .about-section .right-col {
+        margin-top: 35px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Qualities Section
+----------------------------------*/
+
+.qualities-section h3 {
+    font-size: 45px;
+}
+
+.qualities-section p {
+    font-size: 18px;
+}
+
+.qualities-section {
+    background-color: #337271;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.qualities-section ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0px !important;
+}
+
+.qualities-section ul li {
+    width: 33.333%;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.qualities-section ul li:nth-child(2) {
+    border-left: 1px solid rgb(129, 138, 145);
+    border-right: 1px solid rgb(129, 138, 145);
+}
+
+.qualities-section ul li:nth-child(3) {
+    border-right: 1px solid rgb(129, 138, 145);
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .qualities-section h3 {
+        font-size: 40px;
+    }
+    .qualities-section ul li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .qualities-section p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .qualities-section p {
+        font-size: 16px;
+    }
+    .qualities-section ul {
+       flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .qualities-section ul li {
+        width: 50%;
+    }
+    .qualities-section ul li:nth-child(2) {
+        border-left: none;
+        border-right: none;
+    }
+    .qualities-section ul li:nth-child(3) {
+        border-right: none;
+    }
+    .qualities-section h3 {
+        font-size: 35px;
+    }
+}
+
+
+/* ----------------------------------
+    ## We Do Section
+----------------------------------*/
+
+.we-do-row .we-do-box img {
+    width: 100%;
+}
+
+.we-do-row .we-do-box h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 18px;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+.we-do-row .inner-items {
+    box-shadow: 0 0 5px #d3d3d3;
+    padding: 0 0 30px 0;
+    background-color: #fff;
+}
+
+.we-do-row .box-detail {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+@media (max-width:991.98px) {
+    .we-do-row .article-box h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .we-do-row .we-do-box img {
+        width: 100%;
+    }
+    .we-do-row .we-do-box {
+        text-align: center;
+    }
+    .we-do-row .we-do-box h3 {
+        font-size: 20px;
+    }
+    /*.we-do-row .we-do-box img {
+        width: 53%;
+    }
+    .we-do-row .inner-items {
+        padding: 35px 35px 35px 35px;
+    }*/
+    .we-do-box:nth-child(2) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:414.98px) {
+    .we-do-row .we-do-box img {
+        width: 100%;
+    }
+}
+
+
+/* ----------------------------------
+    ## Choose Us Section
+----------------------------------*/
+
+.choose-us-detail .item {
+    border: 1px solid #f0f0f0;
+    background-color: #fff;
+    height: 100%;
+    padding: 28px 20px;
+}
+
+.choose-us-detail h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 20px 0 15px;
+}
+
+.choose-us-detail p {
+    font-size: 16px;
+}
+
+.choose-bottom-text {
+    max-width: 1000px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .choose-us-detail h4 {
+        font-size: 20px;
+    }
+    .choose-us .item {
+        padding: 20px 12px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .choose-us .item {
+        padding: 20px 25px;
+    }
+    .choose-us .service-col {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    h2 span {
+        margin-bottom: 8px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .choose-us-detail .choose-us-col {
+        margin-bottom: 20px;
+    }
+    h2 span {
+        font-size: 18px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Reviews Section
+----------------------------------*/
+
+.reviews-section .card {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 5%);
+    background-color: #fff;
+    border: none;
+}
+
+.reviews-section .feature-image img {
+    border-radius: 50%;
+}
+
+.reviews-section .reviews-detail h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.reviews-section .reviews-detail h4 {
+    font-style: italic;
+    color: #808285;
+    font-size: 18px;
+}
+
+.reviews-section .card .card-text {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.reviews-section .card .card-text {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .reviews-section .card .card-text {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 767.98) {
+    .reviews-section .card {
+        text-align: center;
+    }
+}
+
+
+/* ----------------------------------
+    ## Help Section
+----------------------------------*/
+
+.help-section {
+    background: url(../images/banner-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.help-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.help-section h2 {
+    font-size: 38px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .help-section h2 {
+        font-size: 37px;
+    }
+    .help-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .help-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .help-section h2 {
+        font-size: 34px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .help-section h2 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .help-section h2 br {
+        display: none;
+    }
+}
+
+
+/* ----------------------------------
+    ## FAQ Section
+----------------------------------*/
+
+.faq-section .faqs {
+    max-width: 980px;
+}
+
+.accordion .accordion-section {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.accordion .accordion-section:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.accordion .accordion-section-title {
+    color: #202020;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    margin: 20px 0;
+    display: block;
+    transition: ease 0.3s all;
+    padding-right: 45px;
+}
+
+.accordion .accordion-section-title.active {
+    margin-bottom: 10px;
+    color: #ec5a31;
+    border-bottom: 1px solid #ec5a31;
+    padding-bottom: 18px;
+}
+
+.accordion .accordion-section-title:after {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    margin-top: 0px;
+    content: '';
+    height: 0;
+    width: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #ec5a31;
+    transition: all 300ms ease;
+}
+
+.accordion .accordion-section-title.active:after {
+    border-top: 7px solid #ec5a31;
+    transform: rotate(180deg);
+}
+
+.accordion-section-content {
+    display: none;
+}
+
+.accordion-section-content p {
+    font-size: 18px;
+    line-height: 1.4;
+    padding-top: 7px;
+    padding-bottom: 5px;
+}
+
+.accordion .accordion-section-title:hover {
+    text-decoration: none;
+    color: #ec5a31;
+}
+
+@media (max-width:1199.98px) {
+    .accordion {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .accordion .accordion-section-title.active:after {
+        top: 35%;
+    }
+}
+
+@media (max-width:991.98px) {
+    .accordion-section-content p {
+        font-size: 16px;
+    }
+    .accordion .accordion-section-title {
+        font-size: 19px;
+    }
+    .accordion .accordion-section-title:after {
+        right: 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .accordion .accordion-section-title {
+        font-size: 17px;
+    }
+    .accordion {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .accordion .accordion-section-title {
+        font-size: 17px;
+    }
+    .accordion-section-content p {
+        font-size: 15px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Modal/Popup Style
+----------------------------------*/
+
+.modal-lg {
+    max-width: 645px !important;
+}
+
+.modal-body {
+    padding: 40px 40px;
+}
+
+.modal .btn-close {
+    position: absolute;
+    z-index: 1155;
+    top: 5px;
+    right: 5px;
+}
+
+.modal-body h2 {
+    font-size: 38px;
+}
+
+.modal-body h3 {
+    font-size: 20px;
+}
+
+.modal-body P {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 767.98px) {
+    .form-control {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .modal-body h2 {
+        font-size: 28px;
+    }
+    .modal-body h3 {
+        font-size: 16px;
+    }
+    .modal-body P {
+        font-size: 12px;
+    }
+    .form-control {
+        font-size: 13px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Order confirmation(Thank you)/Order Cancelled Page
+--------------------------------------------------------------*/
+
+.thank-youbanner {
+    background: url(../images/quotes-min.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 92px;
+}
+
+.social-share {
+    padding: 30px 0;
+}
+
+.social-share .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.social-share .fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.social-share .fa {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 2px;
+    border-radius: 3px;
+}
+
+.social-share span {
+    font-family: 'Sarala', sans-serif;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+
+/* ----------------------------------
+    ## Thank You Content Section
+----------------------------------*/
+
+.thank-you .thank-youbanner h1 {
+    font-size: 60px;
+}
+
+.thank-you .thank-youbanner p {
+    font-size: 22px;
+}
+
+.thankyouContentSec p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .thank-you .thank-youbanner h1 {
+        font-size: 55px;
+    }
+    .thank-you .thank-youbanner p {
+        font-size: 21px;
+    }
+    .thankyouContentSec p {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .thankyouContentSec p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .thank-you .thank-youbanner {
+        padding-bottom: 75px;
+    }
+    .thank-you .thank-youbanner h1 {
+        font-size: 45px;
+    }
+    .thank-you .thank-youbanner p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .thank-you .thank-youbanner h1 {
+        font-size: 38px;
+    }
+    .thankyouContentSec p {
+        font-size: 16px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+#  Privacy Policy and Term & Conditions page
+--------------------------------------------------------------*/
+
+.termcond_privacypilocy {
+    padding-top: 145px !important;
+    padding-bottom: 70px;
+}
+
+.termcond_privacypilocy h1 {
+    font-size: 60px;
+}
+
+.privacypolicyterms h2 {
+    font-size: 40px;
+}
+
+.privacypolicyterms h3 {
+    font-size: 24px;
+}
+
+.privacypolicyterms h4 {
+    font-size: 22px;
+}
+
+.privacypolicyterms p {
+    font-size: 18px;
+}
+
+.privacypolicyterms p a {
+    color: #1577da;
+}
+
+.privacypolicyterms li {
+    font-size: 18px;
+}
+
+.privacypolicyterms .highlight {
+    font-weight: 500;
+}
+
+.privacypolicyterms p,
+.privacypolicyterms li,
+.privacypolicyterms h2,
+.privacypolicyterms h3,
+.privacypolicyterms h4 {
+    font-weight: 500;
+}
+
+.termcond_privacypilocy .section-title {
+    padding-bottom: 0;
+}
+
+@media only screen and (max-width: 1199.99px) {
+    .termcond_privacypilocy h1 {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 991.99px) {
+    .privacypolicyterms h2 {
+        text-align: left;
+    }
+    .termcond_privacypilocy h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .termcond_privacypilocy {
+        padding-top: 150px !important;
+        padding-bottom: 50px;
+    }
+    .privacypolicyterms h2 {
+        font-size: 28px;
+    }
+    .privacypolicyterms h3 {
+        font-size: 22px;
+    }
+    .privacypolicyterms h4 {
+        font-size: 20px;
+    }
+    .privacypolicyterms p,
+    .privacypolicyterms li {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 567.98px) {
+    .termcond_privacypilocy h1 {
+        font-size: 35px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+#  Error page
+--------------------------------------------------------------*/

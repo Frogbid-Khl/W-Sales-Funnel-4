@@ -1,0 +1,1951 @@
+/*--------------------------------------------------------------
+    Theme Name: N-95 Mask Template
+    Theme URL: https://www.ogwebsolutions.com/
+    Author: OG Websolutions Pvt. Ltd.
+    Version:  1.0
+--------------------------------------------------------------*/
+
+
+/**
+@File: N-95 Mask Theme Styles
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+
+# General Style
+    ## Google Font
+    ## Preloader
+    ## Back to top button
+    ## Typography
+# Header
+# Footer
+# Home Page
+	## Banner Section
+	## As Seen Section
+    ## Takecare Section
+    ## The Rated Section
+    ## Guranteed Section
+    ## Reviews Section
+    ## Testimonial Section
+    ## FAQ Section
+    ## Facilites Section
+# Upsell/Downsell Page
+# Order Page
+# Order confirmation(Thank you)/Order Cancelled Page
+# Privacy Policy &and Term & Conditions page
+
+**/
+
+
+/*--------------------------------------------------------------
+    # General
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+    ## Google Font
+----------------------------------*/
+
+@import url('../../../../css2-3');
+
+html {
+    scroll-behavior: smooth;
+  }
+/* ----------------------------------
+    ## Prelaoder
+----------------------------------*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #f2f2f2;
+    border-top: 6px solid #1577da;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ----------------------------------
+    ## Back to top button
+----------------------------------*/
+
+.backtotop {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    height: 40px;
+    width: 40px;
+    background-color: #41c5dc;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: opacity 200ms linear;
+    display: none;
+}
+
+.backtotop::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -7px;
+    margin-top: -4px;
+    transform: rotate(-45deg);
+    height: 0px;
+    width: 0px;
+    border-width: 3px 3px 0 0;
+    border-style: solid;
+    padding: 5px;
+    border-color: #fff;
+}
+
+.backtotop:hover {
+    opacity: 1;
+    transition: opacity 200ms linear;
+}
+
+
+/* ----------------------------------
+    ## Typography
+----------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #2f2f2f;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #172d4c;
+}
+
+h4 {
+    font-size: 17px;
+    color: #3c3c3c;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    p {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 767.98px) {
+    p {
+        font-size: 16px;
+    }
+}
+
+p:last-child {
+    margin-bottom: 0px;
+}
+
+dl,
+ol,
+ul {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    color: #3c3c3c;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: none;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    /*color: #3c3c3c;*/
+}
+
+label {
+    font-weight: normal;
+}
+
+label.error {
+    color: #f00;
+    padding-left: 12px;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.form-control {
+    height: 48px;
+    padding: 15px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #aaaaaa;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 20px;
+}
+
+.form-control.error {
+    border-color: #f00;
+}
+
+/* .form-select {
+    background-image: url(../icons/carrot-icon.png);
+    background-size: 10px 8px;
+} */
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+ ::-webkit-input-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ :-moz-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ ::-moz-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ :-ms-input-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+
+/*------ Font Weight ------*/
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+
+/*------ Custom Text Color ------*/
+
+.text-blue {
+    color: #41c5dc;
+}
+
+.text-black {
+    color: #2f2f2f;
+}
+
+
+/*------ Custom Background Color ------*/
+
+.bg-color-white {
+    background-color: #fff;
+}
+
+
+/*------ Border Color ------*/
+
+.border-white {
+    border-color: #ffffff;
+    border-style: solid;
+}
+
+
+/*------ Box Shadow ------*/
+
+.box-shadow {
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/*------ Button Style ------*/
+
+.btn {
+    color: #fff;
+    font-weight: 600;
+    background-color: #41c5dc;
+    font-size: 24px;
+    line-height: 1;
+    padding: 18px 40px;
+    /*box-shadow: inset 0 1px 1px 0 rgb(255 255 255 / 22%);*/
+    text-align: center;
+    display: inline-block;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+.btn:hover,.btn:focus {
+    opacity: 0.8;
+    color: #fff;
+    background-color: #41c5dc;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .btn {
+        font-size: 17px;
+    }
+    .btn-sec,
+    .master-card {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .btn {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .btn {
+        font-size: 15px;
+    }
+}
+
+
+/*------ image width ------*/
+
+@media only screen and (max-width: 991.98px) {
+    .w-100 {
+        width: 60% !important;
+    }
+}
+
+
+/*------ Custom Container ------*/
+
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1170px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .container {
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/*------ Section Spacer ------*/
+
+.sectionPadding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .sectionPadding {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .bannerSection {
+        padding-top: 120px !important;
+        padding-bottom: 45px;
+    }
+}
+
+
+/*------ Section Title ------*/
+
+.section-title {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-title h2 {
+    font-size: 50px;
+    line-height: 1.1;
+    text-transform: normal;
+}
+
+.section-title h3 {
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .section-title h2 {
+        font-size: 42px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .section-title h2 {
+        font-size: 40px;
+    }
+    .section-title h2 br {
+        display: none;
+    }
+    .section-title h3 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .section-title h2 {
+        font-size: 35px;
+    }
+    .section-title h3 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* ------------------------------------------------- 
+#Header	
+------------------------------------------------ */
+
+header {
+    background: #fff;
+    padding: 5px 0;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+
+/*----------  Header for all Inner Page ---------*/
+
+header.innerPages-header {
+    position: static;
+}
+
+header.innerPages-header p {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-mail {
+    width: 19px;
+}
+
+@media (max-width: 767px) {
+    header.innerPages-header p {
+        text-align: center;
+        font-size: 16px;
+    }
+    header .mail {
+        margin-top: 5px !important;
+    }
+}
+
+@media (max-width: 479px) {
+    header.innerPages-header p {
+        font-size: 13px;
+    }
+}
+
+
+/* -------------------------------------------------
+## Navigation 
+-------------------------------------------------- */
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand img {
+    width: 170px;
+}
+
+.navbar-nav a {
+    font-weight: 600;
+    padding: 0 15px !important;
+    color: #111111;
+}
+
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    color: #37bad1;
+}
+
+
+/* Responsive menu */
+@media (max-width:991.98px) {
+    .navbar-nav a {
+        padding: 0 12px !important;
+    }
+    .nav-link{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .navbar-nav .nav-link:focus,
+    .navbar-nav .nav-link:hover {
+       color: #000;
+}
+    .navbar-collapse {
+        position: fixed;
+        left: 0px;
+        top: 40px;
+        right: 0px;
+    }
+    .navbar-nav {
+        margin-top: 15px;
+        background-color: #41c5dc;
+    }
+    .navbar-toggler-icon {
+        background-image: url('../icons/menubar.png');
+        height: 25px;
+        width: 35px;
+        background-size: contain;
+    }
+    .navbar-toggler {
+        border-radius: 0;
+        padding: 0;
+        border: 0;
+        display: block;
+    }
+    .navbar-toggler:focus,
+    .navbar-toggler:hover {
+        outline: none;
+        text-decoration: none;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .navbar-nav li {
+        padding: 10px 0;
+        display: block;
+        border-bottom: #f0f0f0 1px solid;
+    }
+    .navbar-nav li:first-child {
+        border-top: #f0f0f0 1px solid;
+    }
+    .navbar-nav li:last-child {
+        border-bottom: 0;
+    }
+    .navbar-nav li:last-child a {
+        padding-bottom: 0;
+    }
+    .navbar-nav li a {
+        padding: 0 10px;
+        display: block;
+        border-bottom: 0;
+    }
+    .navbar-toggler.close .navbar-toggler-icon {
+        background-image: url(../icons/close-icon.png);
+        background-size: cover;
+        display: block;
+    }
+    header .navbar-nav .nav-link {
+        color: #fff;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+    padding: 40px 0 40px;
+    background-color: #091a31;
+    border-top: 1px solid #757575;
+}
+
+.footer-top {
+    text-align: right;
+}
+
+footer .footer-top .list-inline-item {
+    line-height: 1;
+}
+
+footer .footer-top .list-inline-item a {
+    font-size: 15px;
+    line-height: 1;
+    color: #fff;
+    display: inline-block;
+}
+
+footer .footer-top .list-inline-item a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-top .list-inline-item:not(:last-child) {
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+footer .footer-bottom .copyright {
+    font-size: 15px;
+    color: #fff;
+    margin-top: -20px;
+}
+
+@media only screen and (max-width: 767px) {
+    footer {
+        padding: 30px 0 30px;
+    }
+    footer .footer-top .list-inline-item a {
+        font-size: 14px;
+    }
+    footer .footer-bottom .copyright {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 576.98px) {
+    .footer-top {
+        text-align: center;
+    }
+    footer .footer-bottom .copyright {
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Home Page
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+    ## Banner Section
+----------------------------------*/
+
+.bannerSection {
+    background: url(../images/banner-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 150px;
+}
+
+
+/*---- Left Section ----*/
+
+.bannerSection h1 {
+    font-size: 57px;
+    line-height: 1.1;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bannerSection h1 span {
+    font-size: 24px;
+    display: block;
+    text-transform: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #41c5dc;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.details ul {
+    padding-left: 0px;
+}
+
+.details li {
+    list-style: none;
+    font-weight: 400;
+    font-size: 18px;
+    background-image: url(../icons/tick-mark.png);
+    background-position: 0 5px;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    padding: 5px 0 5px 40px;
+    margin-bottom: 10px;
+}
+
+.bannerSection .left-col p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.bannerSection .left-col h2 img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.bannerSection .left-col h2 {
+    font-size: 55px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .bannerSection h1 {
+        font-size: 47px;
+    }
+    .bannerSection h1 span {
+        font-size: 24px;
+    }
+    .bannerSection .left-col h2 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .bannerSection{
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+    .bannerSection h1 {
+        text-align: center;
+        font-size: 45px;
+    }
+    .bannerSection h1 span {
+        font-size: 22px;
+    }
+    .bannerSection .left-col p {
+        text-align: center;
+        font-size: 18px;
+    }
+    .bannerSection .left-col h2 img {
+        width: 25px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .bannerSection h1 {
+        font-size: 40px;
+    }
+    .bannerSection h1 span {
+        font-size: 20px;
+    }
+    .bannerSection .left-col p {
+        font-size: 16px;
+    }
+    .bannerSection .left-col h2 {
+        font-size: 40px;
+    }
+    .bannerSection .left-col h2 img {
+        width: 20px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .bannerSection h1 {
+        font-size: 30px;
+    }
+    .bannerSection h1 span {
+        font-size: 18px;
+    }
+    .bannerSection .left-col h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* ----------------------------------
+    ## As Seen Section
+----------------------------------*/
+
+.as-seen-Section p {
+    font-size: 22px;
+}
+
+.as-seen-section.SectionPadding {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.as-seen-Section {
+    background-color: #172d4c;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.as-seen-Section ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0px !important;
+}
+
+.as-seen-Section ul li {
+    width: 20%;
+}
+
+@media only screen and (max-width: 575.98px) {
+    .as-seen-Section ul {
+        align-items: center;
+        justify-content: center;
+    }
+    .as-seen-Section .img-fluid{
+        width:80%;
+    }
+}
+
+
+/* ----------------------------------
+    ## Takecare Section
+----------------------------------*/
+
+.blue-title h2 span {
+    font-size: 36px;
+    display: block;
+    text-transform: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #41c5dc;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.takecare-section .right-col ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.takecare-section .right-col ul li {
+    width: 50%;
+    padding: 0 15px;
+    /*margin-bottom: 30px;*/
+}
+
+.takecare-section .right-col .item {
+    height: 100%;
+    padding: 40px 8px;
+    border: 1px solid #41c5dc;
+}
+
+.takecare-section .right-col h3 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0 2px;
+}
+
+.takecare-section .right-col p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #7b7b7b;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .takecare-section .right-col h3 {
+        font-size: 17px;
+    }
+    .takecare-section .right-col .item {
+        padding: 10px 8px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .takecare-section .section-title{
+        margin-bottom: 5px !important;
+    }
+    .takecare-section .mask-women {
+        text-align: center;
+    }
+    .takecare-section .right-col {
+        margin-top: 20px;
+    }
+    .blue-title h2 span {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 576.98px) {
+    
+    .blue-title h2 span {
+        font-size: 18px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Rated Section
+----------------------------------*/
+
+.rated-section {
+    background-color: #f4f9fd;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .rated-section .section-title {
+        margin-bottom: 20px !important;
+    }
+    .rated-section .right-col figure{
+        margin-top: 20px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Gurantee Section
+----------------------------------*/
+
+.gurantee-section {
+    background: url(../images/banner-guarantee.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gurantee-section ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.gurantee-section ul li {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.gurantee-section .item {
+    height: 100%;
+    padding: 50px 17px 50px 17px;
+    border: 1px solid #f4f9fd;
+}
+
+.gurantee-section h3 {
+    font-weight: bold;
+    font-size: 36px;
+    margin: 20px 0 2px;
+    color: #fff;
+}
+
+.gurantee-section p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .gurantee-section h3 {
+        font-size: 28px;
+    }
+    .gurantee-section p {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .gurantee-section .guarantee-detail2 {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .gurantee-section h3 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 576.98px) {
+    .gurantee-section p {
+        font-size: 16px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Review Section
+----------------------------------*/
+.review-section .master-card{
+    margin-bottom: 0px !important;
+}
+@media only screen and (max-width: 991.98px) {
+    .review-section .w-100 {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .review-section .team-col {
+        width: 50% !important;
+    }
+    .review-section .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .review-section .team-row2 {
+        margin-top: 0px !important;
+    }
+    .review-section .btn-sec {
+        margin-top: 10px !important;
+    }
+}
+
+
+/* ----------------------------------
+    ## Testimonial Section
+----------------------------------*/
+
+.testimonial-section {
+    background-color: #f7f7f7;
+}
+
+.testimonial-section .card {
+    border-radius: 15px;
+    -webkit-box-shadow: 0 1px 5px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px rgb(0 0 0 / 10%);
+}
+
+.testimonial-section .card .fivestar {
+    max-width: 100px;
+}
+
+.testimonial-section .card .card-text {
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.5;
+}
+.testimonial-section .card .feature-image img{
+    border-radius: 50%;
+}
+@media only screen and (max-width: 991.68px){
+    .testimonial-section .card .card-text {
+        font-size: 15px;
+    }
+}
+
+/* ----------------------------------
+    ## FAQ Section
+----------------------------------*/
+
+.accordian-section a:hover {
+    color: #2f2f2f !important;
+}
+
+.accordion .accordion-section {
+    /*border-top: 1px solid #fe6a01;*/
+    margin-bottom: 20px;
+}
+
+.accordion .accordion-section:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.accordion .accordion-section-title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    padding: 20px 40px 20px 20px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #d3d3d3;
+    border-top: 2px solid #878787;
+    display: block;
+    position: relative;
+    transition: ease 0.3s all;
+}
+
+.accordion .accordion-section-title.active {
+    color: #fff;
+    border: 1px solid #41c5dc;
+    border-bottom: none;
+    background-color: #41c5dc;
+}
+
+.accordion .accordion-section-title:after {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -3px;
+    content: '';
+    height: 0;
+    width: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #3c3c3c;
+}
+
+.accordion .accordion-section-title.active:after {
+    border-top: 0;
+    border-bottom: 7px solid #fff;
+}
+
+.accordion-section-content {
+    display: none;
+    border: 1px solid #41c5dc;
+    padding: 20px;
+}
+
+.accordion-section-content p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 991.99px) {
+    .accordion .accordion-section-title {
+        font-size: 18px;
+    }
+    .accordion-section-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .accordion .accordion-section-title {
+        font-size: 16px;
+    }
+    .accordion-section-content p {
+        font-size: 15px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Facilities Section
+----------------------------------*/
+
+.facilities-section p {
+    font-size: 22px;
+}
+
+.facilities-section p {
+    font-size: 18px;
+}
+
+.facilities-section {
+    background-color: #172d4c;
+    padding-top: 40px;
+    padding-bottom: 45px;
+}
+
+.facilities-section ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0px !important;
+}
+
+.facilities-section ul li {
+    width: 33.333%;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.facilities-section ul li:nth-child(2) {
+    border-left: 2px solid #1E5162;
+    border-right: 2px solid #1E5162;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .facilities-section h3 {
+        font-size: 20px;
+    }
+    .facilities-section p {
+        font-size: 17px;
+    }
+    .facilities-section ul li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .facilities-section p {
+        font-size: 16px;
+    }
+    .facilities-section ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .facilities-section ul li {
+        width: 100%;
+    }
+    .facilities-section ul li:nth-child(2) {
+        border-left: none;
+        border-right: none;
+    }
+    .facilities-section .fac1,
+    .facilities-section .fac2 {
+        margin-top: 25px !important;
+    }
+}
+
+
+/* ----------------------------------
+    ## Modal/Popup Style
+----------------------------------*/
+
+.modal-lg, .modal-xl {
+    max-width: 730px !important;
+}
+.modal-body {
+    padding: 40px 30px 55px 30px;
+    
+}
+.modal-content {
+    background-color: rgb(244, 249, 253);
+    border-color: rgb(21, 62, 87);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+.modal-body #full_name {
+    background-image: url(../icons/user-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 97%;
+    padding-right: 40px;
+}
+.modal-body #email {
+    background-image: url(../icons/mail-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 97%;
+    padding-right: 40px;
+}
+.modal .btn-close {
+    position: absolute;
+    z-index: 1155;
+    top: 5px;
+    right: 5px;
+}
+
+.modal-body h2 {
+    font-size: 45px;
+}
+
+.modal-body h3 {
+    font-size: 18px;
+}
+
+.modal-body P {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.modal-body .btn{
+    width: 100%;
+    border-radius: 60px;
+}
+@media only screen and (max-width: 1199.98px) {
+    .modal-body h2 {
+        font-size: 42px;
+    }
+}
+@media only screen and (max-width: 767.98px) {
+    .modal-body h2 {
+        font-size: 32px;
+    }
+    .form-control {
+        font-size: 14px;
+    }
+    .modal-content{
+        width: 98%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .modal-body h2 {
+        font-size: 27px;
+    }
+    .modal-body h3 {
+        font-size: 16px;
+    }
+    .modal-body P {
+        font-size: 12px;
+    }
+    .form-control {
+        font-size: 13px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Upsell/Downsell Page
+--------------------------------------------------------------*/
+
+.upsell h1,
+.downsell h1 {
+    font-size: 60px;
+}
+
+.upsell .paymentBlock h3 {
+    font-size: 60px;
+    font-family: Poppins, Helvetica, sans-serif;
+}
+
+.btn .btnmain {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.btn .btnsub {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    line-height: 2;
+    text-transform: capitalize;
+}
+
+.bottom-text {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: rgb(254, 106, 1) !important;
+}
+
+.bottom-text a:hover {
+    color: #41c5dc !important;
+    text-decoration: underline;
+}
+
+.downsell .paymentBlock h3 {
+    font-size: 60px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.upsell h3 span,
+.downsell h3 span {
+    color: #41c5dc;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .upsell h1,
+    .downsell h1 {
+        font-size: 55px;
+    }
+    .upsell .paymentBlock h3 {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .upsell h1,
+    .downsell h1 {
+        font-size: 45px;
+    }
+    .upsell .section-title h2,
+    .downsell .section-title h2 {
+        margin-top: 20px;
+    }
+    .upsell .w-100 {
+        width: 60% !important;
+    }
+    .upsell .paymentBlock h3,
+    .downsell .paymentBlock h3 {
+        font-size: 45px;
+        margin-top: 30px;
+    }
+    .btn .btnmain {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .upsell h1,
+    .downsell h1 {
+        font-size: 38px;
+    }
+    .upsell .paymentBlock h3,
+    .downsell .paymentBlock h3 {
+        font-size: 35px;
+    }
+    .btn .btnmain {
+        font-size: 16px;
+    }
+    .upsell .btn,
+    .downsell .btn {
+        padding: 18px 20px;
+    }
+    .btn .btnsub {
+        font-size: 13px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Order Page
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+## Order Section
+----------------------------------*/
+
+.order-page .bannerSection {
+    padding-top: 130px;
+}
+
+.order-page .bannerSection h1 {
+    font-size: 60px;
+}
+
+.order-page .bannerSection p {
+    font-size: 22px;
+}
+
+.formcontentSec {
+    border-radius: 10px;
+    max-width: 1010px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+}
+
+.formcontentSec .form-status {
+    margin-top: 40px;
+    display: none;
+}
+
+.your_productlist {
+    background: #DBF3FA;
+    padding: 15px;
+    float: left;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    margin-bottom: 30px;
+}
+
+.order_Section .left-col .your_productlist ul {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.order_Section .left-col .your_productlist li {
+    background: none;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #757575;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+.order_Section .left-col .your_productlist li:not(:last-child) {
+    border-bottom: 1px solid #b0d2de;
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+}
+
+.order_Section .left-col .your_productlist li:first-child,
+.order_Section .left-col .your_productlist li:last-child {
+    color: #000;
+    font-size: 15px;
+}
+
+.order_Section .left-col .your_productlist li:last-child {
+    font-size: 18px;
+    padding-left: 0;
+}
+
+.order_Section .left-col .your_productlist li .pull-left {
+    float: left;
+}
+
+.order_Section .left-col .your_productlist li .pull-right {
+    float: right;
+}
+
+.order_Section h2.headingsec {
+    color: #3c3c3c;
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 2px dotted #c7c7c7;
+    padding: 0 0 20px;
+    margin: 0 0 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.order_Section .btn-outer {
+    text-align: center;
+}
+
+.declaration p {
+    font-size: 14px;
+    color: #9b9b9b;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0 15px;
+}
+
+.order_Section .cards {
+    text-align: center;
+}
+
+.order_Section .cards img {
+    display: inline-block;
+}
+
+.order_Section .pay-btn.btn {
+    font-size: 22px;
+    padding: 20px 100px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .order-page .bannerSection p {
+        font-size: 20px;
+    }
+    .order-page .bannerSection h1 {
+        font-size: 55px;
+    }
+    .order_Section .pay-btn.btn {
+        font-size: 22px;
+        padding: 20px 85px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .order_Section .container {
+        max-width: 720px;
+    }
+    .order_Section .pay-btn.btn {
+        font-size: 20px;
+    }
+    .order-page .bannerSection h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .formcontentSec {
+        padding: 15px;
+    }
+    .order_Section h2.headingsec {
+        font-size: 18px;
+    }
+    .order_Section .left-col .your_productlist li {
+        font-size: 12px;
+    }
+    .order_Section .left-col .your_productlist li:first-child,
+    .order_Section .left-col .your_productlist li:last-child {
+        font-size: 14px;
+    }
+    .declaration p {
+        font-size: 13px;
+    }
+    .order_Section .pay-btn.btn {
+        font-size: 18px;
+    }
+    .order-page .bannerSection p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .order_Section .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .order-page .bannerSection h1 {
+        font-size: 32px;
+    }
+    .order-page .bannerSection p {
+        font-size: 16px;
+    }
+    .order_Section .pay-btn.btn {
+        font-size: 16px;
+        padding: 18px 50px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Order confirmation(Thank you)/Order Cancelled Page
+--------------------------------------------------------------*/
+
+.order-cancelled .bannerSection,
+.thank-you .bannerSection {
+    padding-top: 130px;
+}
+
+.order-cancelled .bannerSection p {
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 767.98px) {
+    .order-cancelled .bannerSection p {
+        font-size: 18px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Thank You Content Section
+----------------------------------*/
+
+.thank-you .bannerSection h1 {
+    font-size: 60px;
+}
+
+.thank-you .bannerSection p {
+    font-size: 22px;
+}
+
+.thankyouContentSec p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.thankyouContentSec .supportItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.thankyouContentSec .supportItem .imageBlock {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.thankyouContentSec .supportItem .imageBlock img {
+    width: 90px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .thank-you .bannerSection h1 {
+        font-size: 55px;
+    }
+    .thankyouContentSec p {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .thankyouContentSec p {
+        font-size: 18px;
+    }
+    .thankyouContentSec .supportItem .imageBlock img {
+        width: 70px;
+    }
+    .facebook-logo {
+        text-align: center;
+    }
+    .facebook-logo img {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .thank-you .bannerSection h1 {
+        font-size: 45px;
+    }
+    .thank-you .bannerSection p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .thank-you .bannerSection h1 {
+        font-size: 38px;
+    }
+    .thankyouContentSec p {
+        font-size: 16px;
+    }
+    .thankyouContentSec .supportItem {
+        flex-direction: column;
+        text-align: center;
+        max-width: 320px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .thankyouContentSec .supportItem .imageBlock img {
+        margin-bottom: 12px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+#  Privacy Policy and Term & Conditions page
+--------------------------------------------------------------*/
+
+.termcond_privacypilocy h1 {
+    font-size: 60px;
+}
+
+.privacypolicyterms h2 {
+    font-size: 40px;
+}
+
+.privacypolicyterms h3 {
+    font-size: 24px;
+}
+
+.privacypolicyterms h4 {
+    font-size: 22px;
+}
+
+.privacypolicyterms p {
+    font-size: 18px;
+}
+
+.privacypolicyterms p a {
+    color: #1577da;
+}
+
+.privacypolicyterms li {
+    font-size: 18px;
+}
+
+.privacypolicyterms .highlight {
+    font-weight: 500;
+}
+
+.privacypolicyterms p,
+.privacypolicyterms li,
+.privacypolicyterms h2,
+.privacypolicyterms h3,
+.privacypolicyterms h4 {
+    font-weight: 500;
+}
+
+.termcond_privacypilocy {
+    padding-top: 130px;
+}
+
+.termcond_privacypilocy .section-title {
+    padding-bottom: 0;
+}
+
+@media only screen and (max-width: 991.99px) {
+    .termcond_privacypilocy {
+        padding-top: 110px;
+    }
+    .termcond_privacypilocy h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .termcond_privacypilocy {
+        padding-bottom: 30px;
+    }
+    .privacypolicyterms h2 {
+        font-size: 28px;
+    }
+    .privacypolicyterms h3 {
+        font-size: 22px;
+    }
+    .privacypolicyterms h4 {
+        font-size: 20px;
+    }
+    .privacypolicyterms p,
+    .privacypolicyterms li {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 567.98px) {
+    .termcond_privacypilocy h1 {
+        font-size: 38px;
+    }
+}
+
+/* stripe card */
+.payment-outer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 22px 15px 5px;
+    background-color: #e9e9e9;
+    position: relative;
+    margin-top:10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.payment-outer:before{
+    content: "";
+    position: absolute;
+    left: 35px;
+	top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #e9e9e9;
+}
+.payment-outer .form-group{
+    width: 33.33%;
+    padding: 0 7px;
+}
+.payment-outer .form-group.card-number-group{
+    width: 100%;
+}
+.payment-outer .form-group #card_number{
+    background-image: url('../images/cards.png');
+    background-repeat: no-repeat;
+    background-size: 120px;
+    background-position: right 10px center;
+    padding-right: 140px;
+}
+.paypal-card-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:15px;
+}
+.paypal-card-group label:first-child{
+    margin-bottom: 10px;
+}
+.form-group.btn-outer{
+    position: relative;
+}
+.form-group.btn-outer #loader{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+	border-radius: 5px;
+}
+form #loader img{
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+@media only screen and (max-width: 390px) {
+    .payment-outer{
+   	 padding: 15px 10px 0px;
+    }
+    .payment-outer .form-group #card_number{
+   	 padding-right: 100px;
+   	 background-size: 80px;
+    }
+    form select{
+   	 background-size: 12px;
+    }
+}
+/* stripe card end */

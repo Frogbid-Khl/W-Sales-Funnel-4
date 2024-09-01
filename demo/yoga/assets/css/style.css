@@ -1,0 +1,1741 @@
+/*--------------------------------------------------------------
+    Theme Name: Yoga Template
+    Theme URL: https://www.ogwebsolutions.com/
+    Author: OG Websolutions Pvt. Ltd.
+    Version:  1.0
+--------------------------------------------------------------*/
+
+
+/*============================================
+	Index
+============================================
+
+# General
+	## Google Font
+	## Preloader Spinner
+	## Back to top
+
+# Header
+#Footer
+
+# Homepage
+	## Banner Section
+    ## Styles of Yoga Section
+    ## Video Section
+    ## Posture Section
+    ## Team Section
+    ## Featured Section
+    ## What You Get Section
+    ## FAQ Section
+    ## Oto popup 
+
+# Thank-You Page
+# Order Cancelled Page
+# Privacy Policy & Term and Conditions page
+
+
+/*--------------------------------------------------------------
+    # General
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+    ## Google Font
+----------------------------------*/
+
+@import url('../../../../css2-14');
+
+/* ----------------------------------
+    ## Typography
+----------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #2c2c2c;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #171717;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+    color: #7a7a7a;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+p:last-child {
+    margin-bottom: 0px;
+}
+
+dl,
+ol,
+ul {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    color: #ffffff;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: none;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    color: #fff;
+}
+
+label {
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 5px;
+    display: block;
+}
+
+label.error {
+    color: #f00;
+    padding-left: 12px;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.form-control {
+    height: auto;
+    padding: 15px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #aaaaaa;
+    background-color: #ffffff;
+    border-radius: 5px;
+    height: 50px;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 20px;
+}
+
+.form-control.error {
+    border-color: #f00;
+}
+
+.form-select {
+    background-image: url(../icons/carrot-icon.png);
+    background-size: 10px 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+ ::-webkit-input-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ :-moz-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ ::-moz-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ :-ms-input-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+
+/*------ Custom Container ------*/
+
+@media only screen and (max-width: 767.98px) {
+    .container {
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .container {
+        max-width: 95%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/*------ Section Spacer ------*/
+
+.sectionPadding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .sectionPadding {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .sectionPadding {
+        padding-top: 45px;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .sectionPadding {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+
+/*------ Section Title ------*/
+
+.section-title {
+    /*max-width: 1000px;*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-title h2 {
+    font-size: 58px;
+    line-height: 1.3;
+    color: #171717;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .section-title h2 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 18px;
+        /*padding: 10px 0 5px*/
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .section-title h2 {
+        font-size: 40px;
+    }
+    h3,
+    h4,
+    p {
+        text-align: center;
+    }
+    .main-btn {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .section-title h2 {
+        font-size: 35px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+
+
+/*------ Font Weight ------*/
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+
+/*------ Custom Text Color ------*/
+
+.text-violet {
+    color: #87348f;
+}
+
+.text-red {
+    color: #f61f0c;
+}
+
+.text-black {
+    color: #171717;
+}
+
+
+/*------ Custom Background Color ------*/
+
+.bg-color-white {
+    background-color: #fff;
+}
+
+
+/*------ Box Shadow ------*/
+
+.box-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/*------ Button Style ------*/
+
+.btn {
+    background-color: #87348f !important;
+    color: #ffffff;
+    font-size: 19px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    line-height: 0.8;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btn-sec .btn .text-uppercase {
+    margin-top: 8px;
+}
+
+
+.btn:hover {
+    opacity: 0.9;
+    color: #fff;
+}
+
+.btn a:hover {
+    color: #fff;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 767.98px) {
+    .btn {
+        padding: 15px 30px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .btn {
+        padding: 10px 22px;
+    }
+}
+
+
+/*------ Image Width ------*/
+
+@media only screen and (max-width: 767.98px) {
+    .w-100 {
+        width: 80% !important;
+    }
+    .img-fluid {
+        max-width: 80% !important;
+    }
+}
+
+
+/* ----------------------------------
+    ## Prelaoder
+----------------------------------*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #f2f2f2;
+    border-top: 6px solid #f6210c;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ----------------------------------
+    ## Back to top button
+----------------------------------*/
+
+.backtotop {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    height: 40px;
+    width: 40px;
+    background-color: #87348f;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: opacity 200ms linear;
+    display: none;
+}
+
+.backtotop::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -7px;
+    margin-top: -4px;
+    transform: rotate(-45deg);
+    height: 0px;
+    width: 0px;
+    border-width: 3px 3px 0 0;
+    border-style: solid;
+    padding: 5px;
+    border-color: #ffffff;
+}
+
+.backtotop:hover {
+    opacity: 1;
+    transition: opacity 200ms linear;
+}
+
+
+/*-------------------------------------------
+# Header
+---------------------------------------------*/
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+}
+
+header .btn {
+    margin-top: 0px;
+}
+
+header .header-logo img {
+    width: 180px;
+}
+
+header.fixed {
+    background-color: #fef4ff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+header .mail a:hover {
+    text-decoration: underline;
+    color: #87348f;
+}
+
+header .header-mail {
+    width: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    header .header-logo img {
+        width: 170px;
+    }
+    header .headerLeft {
+        text-align: center;
+    }
+    header .headerRight {
+        padding-top: 15px;
+        text-align: center;
+    }
+}
+
+
+/*-------------------------------
+# Footer
+---------------------------------*/
+
+footer {
+    background-color: rgb(56, 17, 60);
+    padding: 40px 0 40px;
+}
+
+footer .footer-logo .img-fluid {
+    width: 180px;
+}
+
+footer .footer-top .list-inline-item {
+    line-height: 1;
+}
+
+footer .footer-top .list-inline-item a {
+    font-size: 16px;
+    line-height: 1;
+    color: #fff;
+    display: inline-block;
+}
+
+footer .footer-top .list-inline-item a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-top .list-inline-item:not(:last-child) {
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+footer .footer-bottom .copyright {
+    font-size: 16px;
+    color: #fff;
+}
+
+footer .footer-bottom p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 767px) {
+    footer {
+        padding: 30px 0 30px;
+    }
+    footer .logo {
+        max-width: 170px;
+    }
+    footer .footer-top .list-inline-item a {
+        font-size: 14px;
+    }
+    footer .footer-bottom .copyright {
+        font-size: 14px;
+    }
+    footer .footer-bottom p {
+        font-size: 14px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Home Page
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+    ## Banner Section
+----------------------------------*/
+
+.banner-section {
+    /* background-image: url(../img/banner-img.jpg);
+    background-image: url(../img/Yoga-Banner.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover; */
+    padding-top: 100px;
+    background-color: rgb(231, 231, 231);
+}
+
+.banner-section h1 {
+    font-size: 114px;
+    line-height: 1.2;
+}
+
+.banner-section h2, .banner-section h1 {
+    font-size: 55px;
+    line-height: 1.2;
+}
+
+.banner-section p {
+    color: #7a7a7a;
+}
+
+
+@media only screen and (max-width: 1199.98px) {
+    .banner-section h1 {
+        font-size: 90px;
+    }
+    .banner-section h2, .banner-section h1 {
+        font-size: 47px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .banner-section h1 {
+        font-size: 70px;
+    }
+    .banner-section h2, .banner-section h1 {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+
+    .banner-section .left-col {
+        text-align: center;
+    }
+    .banner-section .right-col {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .banner-section h1,
+    .banner-section h2 {
+        text-align: center;
+    }
+    .banner-section h1 {
+        margin-top: 40px;
+    }
+    .banner-section h1 {
+        font-size: 70px;
+    }
+    .banner-section h2, .banner-section h1 {
+        font-size: 30px;
+    }
+    .banner-section .Girl-image img {
+        margin-top: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 575.98px) {
+    .banner-section .Girl-image img {
+        margin-top: 25px;
+        width: 80%;
+    }
+    .banner-section h1 {
+        font-size: 55px;
+    }
+    .banner-section h2, .banner-section h1 {
+        font-size: 25px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Styles of Yoga Section
+----------------------------------*/
+
+.yoga-styles-section h2 {
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+.yoga-styles-section .styles-yoga h3 {
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .yoga-styles-section h2 {
+        font-size: 30px;
+    }
+    .yoga-styles-section p,
+    .yoga-styles-section h3 {
+        text-align: left;
+    }
+    .yoga-styles-section .styles-yoga h3 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .yoga-styles-section .text-left {
+        margin-top: 30px;
+    }
+    .yoga-styles-section p,
+    .yoga-styles-section h3 {
+        text-align: center;
+    }
+}
+
+
+/* ----------------------------------
+    ## Video Section
+----------------------------------*/
+
+.video-section {
+    background-image: url(../img/video-poster.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    background-attachment: fixed;
+}
+
+.video-btn .btn {
+    background-color: transparent !important;
+    font-size: 0px;
+    border: transparent;
+    padding: 0;
+    margin: 0 auto;
+}
+.video-btn .btn img{
+    border-radius: 100%;
+}
+.modal-body .video {
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-sec .modal-body {
+    padding: 0px !important;
+    background-color: transparent;
+    line-height: 0;
+}
+
+.video-section {
+    padding-top: 300px;
+    padding-bottom: 330px;
+}
+
+
+@media only screen and (max-width: 991.98px) {
+    .video-section {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+    .team-section h4 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    
+    .video-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Posture Section
+----------------------------------*/
+
+/*.posture-section .right-col {
+    padding-left: 40px;
+}*/
+.posture-image{
+    text-align: center;
+}
+
+.posture-section ul {
+    padding-left: 0px;
+}
+
+.posture-section li {
+    list-style: none;
+    font-weight: 500;
+    font-size: 18px;
+    background-image: url(../icons/bullet.png);
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding: 5px 0 5px 40px;
+    margin-bottom: 12px;
+    color: #7a7a7a;
+}
+@media only screen and (max-width: 1199.98px) {
+    .posture-image img{
+        text-align: left;
+        width: 100%;
+    }
+    .featured-section .right-col {
+        padding-right: 0px !important;
+    }
+    .featured-section .ps-lg-5 {
+        padding-left: 2rem!important;
+    }
+}
+@media only screen and (max-width: 991.98px) {
+    .posture-section .right-col {
+        padding-left: 0px;
+    }
+    .posture-image {
+        text-align: center;
+    }
+    .posture-section ul {
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .posture-section .right-col {
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .posture-section .right-col {
+        padding-left: 20px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Team Section
+----------------------------------*/
+
+.team-section {
+    padding-bottom: 50px;
+}
+
+.team-section img {
+    max-width: 100%;
+}
+
+.team-section .item {
+    padding: 20px 20px 25px;
+}
+
+.team-section h4 {
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .team-section h4 {
+        font-size: 22px;
+    }
+    .team-section .item {
+        padding: 20px 40px 25px;
+    }
+    .team-section {
+        padding-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 767.98px) {
+    .team-section .item {
+        text-align: center;
+    }
+    .team-section .section-title {
+        margin-bottom: 15px !important;
+    }
+}
+
+/* ----------------------------------
+    ## Featured Section
+----------------------------------*/
+
+.featured-section {
+    background-color: rgb(231, 231, 231);
+}
+
+.featured-section h4 {
+    font-size: 20px;
+}
+
+.featured-section .section-title h2 {
+    font-size: 30px;
+}
+
+.featured-section p {
+    font-size: 22px;
+    color: #171717;
+    line-height: 1.5;
+}
+.featured-section .right-col{
+    padding-right: 75px !important;
+}
+@media only screen and (max-width: 1199.98px) {
+    .featured-section .section-title h4 {
+        margin-top: 0px !important;
+    }
+    .featured-section .star-img {
+        margin-bottom: 5px !important;
+    }
+    .featured-section .details p {
+        margin-bottom: 10px;
+    }
+    .featured-section .right-col {
+        padding-right: 0px !important;
+    }
+    .featured-section .ps-lg-5 {
+        padding-left: 2rem!important;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .featured-section .star-img {
+        text-align: center;
+    }
+    .featured-section h2 {
+        text-align: center;
+    }
+    .featured-section .right-col{
+        padding-bottom: 0px !important;
+    }
+    
+}
+
+@media only screen and (max-width: 767.98px) {
+    .featured-section p {
+        font-size: 18px;
+    }
+    .featured-section .ps-lg-5 {
+        padding-left: 0!important;
+    }
+}
+
+
+/* ----------------------------------
+    ## What You Section
+----------------------------------*/
+
+.what-you-section .yoga-types h2 {
+    font-size: 40px;
+}
+
+.what-you-section p {
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .what-you-section .section-title h2 {
+        margin-top: 0px !important;
+    }
+    .what-you-section .type1 {
+        margin-top: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .what-you-section .type1 .section-title h2 {
+        margin-top: 35px !important;
+    }
+    .what-you-section h2,
+    .what-you-section p {
+        text-align: center;
+    }
+    .what-you-section p {
+        font-size: 20px;
+    }
+    .what-you-section .yoga-types h2 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .what-you-section .yoga-types .section-title h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* ----------------------------------
+    ## FAQ Section
+----------------------------------*/
+.faq-section{
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.faq-section {
+    background-color: rgb(246, 244, 242);
+}
+
+.faq-section .card h4 {
+    font-size: 21px;
+}
+
+.faq-section .card {
+    border-radius: 0;
+    border: none;
+    padding: 20px 42px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .faq-section .card {
+        padding: 17px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .faq-section br {
+        display: none;
+    }
+}
+@media only screen and (max-width: 767.98px) {
+    .faq-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+/* ----------------------------------
+    ## Modal/Popup Style
+----------------------------------*/
+
+.modal-body {
+    padding: 30px 25px 30px;
+}
+
+.modal .btn-close {
+    position: absolute;
+    z-index: 1155;
+    top: 5px;
+    right: 5px;
+}
+
+.modal-body h2 {
+    font-size: 34px;
+}
+
+.modal-body h3 {
+    font-size: 18px;
+}
+
+.modal-body P {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.modal-body .btn {
+    border-radius: 25px;
+    padding: 15px 50px;
+}
+
+.modal-body .title {
+    font-size: 25px;
+}
+
+.modal-body .sub-title {
+    font-size: 16px;
+    opacity: 0.7;
+    font-weight: normal;
+}
+
+.modal-body .btn {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 767.98px) {
+    .form-control {
+        font-size: 14px;
+    }
+    .modal-body .title {
+        font-size: 20px;
+    }
+    .modal-body .sub-title {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .modal-body h2 {
+        font-size: 28px;
+    }
+    .modal-body h3 {
+        font-size: 16px;
+    }
+    .modal-body P {
+        font-size: 12px;
+    }
+    .form-control {
+        font-size: 13px;
+    }
+    .modal-body .btn {
+        border-radius: 25px;
+        padding: 15px 27px;
+    }
+    .modal-body .title {
+        font-size: 16px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Upsell/Downsell Page
+--------------------------------------------------------------*/
+
+.up-downsell .banner-section {
+    background-color: rgb(246, 244, 242);
+    background-image: none !important;
+    padding-top: 190px;
+    padding-bottom: 110px;
+}
+
+.up-downsell .banner-section span {
+    font-size: 24px;
+    display: block;
+    line-height: 2;
+}
+
+.up-downsell h1 {
+    font-size: 55px;
+}
+
+.bottom-text {
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: #171717 !important;
+    margin-left: 25px;
+}
+
+.bottom-text a:hover {
+    color: #2c2c2c!important;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .up-downsell .banner-section {
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .up-downsell h1 {
+        font-size: 40px;
+    }
+    /*.upsell .w-100 {
+        width: 60% !important;
+    }*/
+    .up-downsell .banner-section h1 span {
+        font-size: 22px;
+    }
+    .bottom-text {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .up-downsell .banner-section {
+        padding-top: 120px;
+        padding-bottom: 35px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .up-downsell h1 {
+        font-size: 32px;
+    }
+    .up-downsell .banner-section h1 span {
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Order Page
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+## Order Section
+----------------------------------*/
+
+.order-page .banner-section {
+    background-color: rgb(246, 244, 242);
+    background-image: none !important;
+}
+
+.order-page .banner-section h1 {
+    font-size: 60px;
+}
+
+.order-page .banner-section p {
+    font-size: 22px;
+}
+
+.formcontentSec {
+    border-radius: 10px;
+    max-width: 1010px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+}
+
+/* .formcontentSec .form-status {
+    margin-top: 40px;
+    display: none;
+} */
+
+.your_productlist {
+    background: #fdf5e2;
+    padding: 15px;
+    float: left;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    margin-bottom: 30px;
+}
+
+.order_Section .left-col .your_productlist ul {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.order_Section .left-col .your_productlist li {
+    background: none;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #757575;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.order_Section .left-col .your_productlist li:not(:last-child) {
+    border-bottom: 1px solid #b0d2de;
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+}
+
+.order_Section .left-col .your_productlist li:first-child,
+.order_Section .left-col .your_productlist li:last-child {
+    color: #000;
+    font-size: 15px;
+}
+
+.order_Section .left-col .your_productlist li:last-child {
+    font-size: 18px;
+    padding-left: 0;
+}
+
+.order_Section .left-col .your_productlist li .pull-left {
+    float: left;
+}
+
+.order_Section .left-col .your_productlist li .pull-right {
+    float: right;
+}
+
+.order_Section h2.headingsec {
+    color: #3c3c3c;
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 2px dotted #c7c7c7;
+    padding: 0 0 20px;
+    margin: 0 0 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.order_Section .btn-outer {
+    text-align: center;
+}
+
+.declaration p {
+    font-size: 14px;
+    color: #9b9b9b;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0 15px;
+}
+
+select.form-control {
+    background-image: url(../img/Vector.webp);
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 15px 8px;
+    cursor: pointer;
+}
+.order_Section .cards {
+    text-align: center;
+}
+
+.order_Section .cards img {
+    display: inline-block;
+}
+
+.order_Section .pay-btn.btn {
+    font-size: 22px;
+    padding: 20px 90px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .order-page .banner-section p {
+        font-size: 20px;
+    }
+    .order-page .banner-section h1 {
+        font-size: 55px;
+    }
+    .order_Section .pay-btn.btn {
+        font-size: 22px;
+        padding: 20px 85px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .order-page .banner-section h1 {
+        font-size: 45px;
+    }
+    .order_Section .container {
+        max-width: 720px;
+    }
+    .order_Section .pay-btn.btn {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .order-page .banner-section {
+        padding-top: 85px;
+        padding-bottom: 55px;
+    }
+    .formcontentSec {
+        padding: 15px;
+    }
+    .order_Section h2.headingsec {
+        font-size: 18px;
+    }
+    .order_Section .left-col .your_productlist li {
+        font-size: 12px;
+    }
+    .order_Section .left-col .your_productlist li:first-child,
+    .order_Section .left-col .your_productlist li:last-child {
+        font-size: 14px;
+    }
+    .declaration p {
+        font-size: 13px;
+    }
+    .order_Section .pay-btn.btn {
+        font-size: 18px;
+    }
+    .order-page .banner-section p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .order-page .container {
+        max-width: 100%;
+    }
+    .order-page .banner-section h1 {
+        font-size: 35px;
+    }
+    .order_Section .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .order-page .banner-section p {
+        font-size: 16px;
+    }
+    .order_Section .pay-btn.btn {
+        font-size: 16px;
+        padding: 18px 50px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Order confirmation(Thank you)/Order Cancelled Page
+--------------------------------------------------------------*/
+
+.order-cancelled .banner-section {
+    background-color: rgb(246, 244, 242);
+    background-image: none !important;
+}
+
+.order-cancelled .banner-section h1 {
+    font-size: 60px;
+}
+
+.order-cancelled .banner-section p {
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .order-cancelled .banner-section h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .order-cancelled .banner-section {
+        padding-top: 85px;
+        padding-bottom: 55px;
+    }
+    .order-cancelled .banner-section h1 {
+        font-size: 35px;
+    }
+    .order-cancelled .banner-section p {
+        font-size: 18px;
+        text-align: center;
+    }
+    .order-cancelled p {
+        text-align: left;
+    }
+}
+
+
+/* ----------------------------------
+    ## Thank You Content Section
+----------------------------------*/
+
+.thank-you .banner-section {
+    background-color: rgb(246, 244, 242);
+    background-image: none !important;
+}
+
+.thank-you .banner-section h1 {
+    font-size: 60px;
+}
+
+.thank-you .banner-section span {
+    font-size: 26px;
+    display: block;
+    margin-top: 8px;
+}
+
+.thank-you .banner-section p {
+    font-size: 22px;
+}
+
+.thankyouContentSec p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .thank-you .banner-section h1 {
+        font-size: 55px;
+    }
+    .thankyouContentSec p {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .thank-you .banner-section h1 {
+        font-size: 50px;
+    }
+    .thank-you .banner-section h1 span {
+        font-size: 22px;
+    }
+    .thankyouContentSec p {
+        font-size: 18px;
+    }
+    .facebook-logo {
+        text-align: center;
+    }
+    .facebook-logo img {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .thank-you .banner-section h1 {
+        font-size: 40px;
+    }
+    .thank-you .banner-section h1 span {
+        font-size: 21px;
+    }
+    .thank-you .banner-section p {
+        font-size: 18px;
+        text-align: center;
+    }
+    .thank-you p {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .thank-you .container {
+        max-width: 100%;
+    }
+    .thank-you .banner-section h1 {
+        font-size: 35px;
+    }
+    .thank-you .banner-section h1 span {
+        font-size: 20px;
+    }
+    .thankyouContentSec p {
+        font-size: 16px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+#  Privacy Policy and Term & Conditions page
+--------------------------------------------------------------*/
+
+.termcond_privacypilocy.banner-section {
+    background-color: rgb(246, 244, 242);
+    background-image: none !important;
+}
+
+.termcond_privacypilocy h1 {
+    font-size: 60px;
+}
+
+.privacypolicyterms p {
+    margin-bottom: 30px;
+}
+
+.privacypolicyterms h2 {
+    font-size: 40px;
+}
+
+.privacypolicyterms h3 {
+    font-size: 24px;
+}
+
+.privacypolicyterms h4 {
+    font-size: 22px;
+}
+
+.privacypolicyterms p {
+    font-size: 18px;
+}
+
+.privacypolicyterms p a {
+    color: #1577da;
+}
+
+.privacypolicyterms li {
+    font-size: 18px;
+}
+
+.privacypolicyterms .highlight {
+    font-weight: 500;
+}
+
+.privacypolicyterms p,
+.privacypolicyterms li,
+.privacypolicyterms h2,
+.privacypolicyterms h3,
+.privacypolicyterms h4 {
+    font-weight: 500;
+}
+
+.termcond_privacypilocy {
+    padding-top: 80px;
+}
+
+.termcond_privacypilocy .section-title {
+    padding-bottom: 0;
+}
+
+@media only screen and (max-width: 991.99px) {
+    .termcond_privacypilocy {
+        padding-top: 75px;
+    }
+    .termcond_privacypilocy h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .privacypolicyterms h2 {
+        font-size: 28px;
+    }
+    .privacypolicyterms h3 {
+        font-size: 22px;
+        text-align: left;
+    }
+    .privacypolicyterms h4 {
+        font-size: 20px;
+    }
+    .privacypolicyterms p,
+    .privacypolicyterms li {
+        font-size: 16px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 567.98px) {
+    .termcond_privacypilocy h1 {
+        font-size: 38px;
+    }
+}
+
+#consultationForm input[type=text]{
+    background-image: url(../icons/name2.webp);
+    background-repeat: no-repeat;
+    background-position: 97%;
+    box-shadow: inset 0 1px 2px rgb(130 137 150 / 23%), 0 1px 0 rgb(255 255 255 / 95%) !important;
+}
+#consultationForm input[type=email]{
+    background-image: url(../icons/email2.webp);
+    background-repeat: no-repeat;
+    background-position: 97%;
+    box-shadow: inset 0 1px 2px rgb(130 137 150 / 23%), 0 1px 0 rgb(255 255 255 / 95%) !important;
+}
+
+/* stripe card */
+.payment-outer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 22px 15px 5px;
+    background-color: #e9e9e9;
+    position: relative;
+    margin-top:10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.payment-outer:before{
+    content: "";
+    position: absolute;
+    left: 35px;
+	top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #e9e9e9;
+}
+.form-group.btn-outer .btn {
+    margin-top: 0;
+
+}
+.form-group.btn-outer{
+    margin-bottom: 10px;
+}
+.payment-outer .form-group{
+    width: 33.33%;
+    padding: 0 7px;
+}
+.payment-outer .form-group.card-number-group{
+    width: 100%;
+}
+.payment-outer .form-group #card_number{
+    background-image: url('../img/cards.png');
+    background-repeat: no-repeat;
+    background-size: 120px;
+    background-position: right 10px center;
+    padding-right: 140px;
+}
+.paypal-card-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:15px;
+}
+.paypal-card-group label:first-child{
+    margin-bottom: 10px;
+}
+.form-group.btn-outer{
+    position: relative;
+}
+.form-group.btn-outer #loader{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+	border-radius: 50px;
+}
+form #loader img{
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+@media only screen and (max-width: 390px) {
+    .payment-outer{
+   	 padding: 15px 10px 0px;
+    }
+    .payment-outer .form-group #card_number{
+   	 padding-right: 100px;
+   	 background-size: 80px;
+    }
+    form select{
+   	 background-size: 12px;
+    }
+}
+/* stripe card end */
